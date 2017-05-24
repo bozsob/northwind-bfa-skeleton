@@ -3,21 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <title>Northwind Main</title>
     <script src="webjars/jquery/3.2.0/jquery.min.js"></script>
     <script src="index.js"></script>
     <link href="index.css" rel="stylesheet"/>
 </head>
 <body>
-<h1 id="title">Wait for it...</h1>
-<form method="POST" action="hi">
-    <input type="text" name="name" placeholder="What's your name?">
-    <select name="lang">
-        <option value="en">English</option>
-        <option value="hu">Magyar</option>
-        <option value="pl">Polski</option>
-    </select>
-    <input type="submit">
-</form>
+<h1>Northwind project</h1>
+
+<button onclick="getOrders()">Orders</button>
+<button onclick="getCustomersAndSuppliers()">Customers and Suppliers</button>
+<button onclick="getDataToInvoice()">Data for invoice</button>
+<button onclick="getTotalOrders()">Total amounts for orders</button>
+<button onclick="getTotalIncome()">Total amount of product's sales</button>
+
+<div id="order"></div>
+<div id="cust-and-suppl"></div>
+<div id="invoice"></div>
+<div id="total"></div>
+<div id="sales"></div>
+
 </body>
 </html>
