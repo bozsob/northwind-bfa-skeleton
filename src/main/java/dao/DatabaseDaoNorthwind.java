@@ -24,7 +24,8 @@ public class DatabaseDaoNorthwind implements DaoNorthwind {
 
         List<Order> orders = new ArrayList<>();
 
-        query = "SELECT o.OrderID, o.ProductID, p.ProductName, o.UnitPrice, o.Quantity,o.Discount " +
+        query = "SELECT o.OrderID, o.ProductID, p.ProductName, o.UnitPrice, o.Quantity,o.Discount," +
+            " o.UnitPrice * o.Quantity AS 'Total'" +
             "FROM OrderDetails AS o " +
             "JOIN Products AS p " +
             "ON o.ProductID = p.ProductID " +
